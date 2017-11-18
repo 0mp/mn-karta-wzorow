@@ -8,22 +8,22 @@ Liczby maszynowe: $x=(-1)^s \cdot m \cdot \beta^e$, gdzie $0\leq m < \beta$ i $m
 Liczby znormalizowane: $x=(-1)^s\cdot m \cdot 2^e$, gdzie $1\leq m < 2$;
 
 \entry
-Gdy $x$---l. maszynowa, to $fl(x)=x$, wpp. $fl(x)=ROUND(x)=RN(x)$, gdzie $RN(x)$ zaokrągla do nabliższej l. maszynowej;
+Gdy $x$---l. maszynowa, to $\mathrm{fl}(x)=x$, wpp. $\mathrm{fl}(x)=\mathrm{ROUND}(x)=\mathrm{RN}(x)$, gdzie $\mathrm{RN}(x)$ zaokrągla do nabliższej l. maszynowej;
 
 \entry
-Błąd reprezentacji: $\abs{fl(x) - x}$;
+Błąd reprezentacji: $\abs{\mathrm{fl}(x) - x}$;
 
 \entry
-$\frac{\abs{fl(x) - x}}{\abs{x}}\leq 2^{-p}=\nu$, o ile nie ma *flow;
+$\frac{\abs{\mathrm{fl}(x) - x}}{\abs{x}}\leq 2^{-p}=\nu$, o ile nie ma *flow;
 
 \entry
-$fl(x) = x(1+\epsilon_x)$, $\abs{\epsilon_x}\leq \nu$
+$\mathrm{fl}(x) = x(1+\epsilon_x)$, $\abs{\epsilon_x}\leq \nu$
 
 \entry
-Standard fl gwarantuje, że $a \Hsquare b = fl(a\Hsquare b)$, jeżeli nie ma NaN, *flow;
+Standard fl gwarantuje, że $a \Hsquare b = \mathrm{fl}(a\Hsquare b)$, jeżeli nie ma NaN, *flow;
 
 \entry
-Fused multiply-add: $fl(FMA(a,b,c)) = fl(a \cdot b + c)$, gdzie $FMA(a,b,c)=a\cdot b + c$;
+Fused multiply-add: $\mathrm{fl}(\mathrm{FMA}(a,b,c)) = \mathrm{fl}(a \cdot b + c)$, gdzie $\mathrm{FMA}(a,b,c)=a\cdot b + c$;
 
 % Błędy w obliczeniach numerycznych.
 
