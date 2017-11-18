@@ -1,0 +1,47 @@
+\section{Normy}
+
+\subsection{Normy wektorowe w $\mathbb{R}^n$}
+
+\entry
+$\norm{x}_1 \coloneqq \sum^n_{i=1}\abs{x_i}$;
+
+\entry
+$\norm{x}_2 \coloneqq \sqrt{x_1^2+\ldots + x_n^2}$;
+
+\entry
+$\norm{x}_\infty \coloneqq \max_{i}\abs{x_i}$;
+
+\entry
+$\norm{x}_p \coloneqq (\sum_i\abs{x_i}^p)^{1/p}$;
+
+\subsection{Normy macierzowe ind. przez normy wektorowe}
+
+\entry
+$\norm{A}_p \coloneqq \max\limits_{x\neq 0} \frac{\norm{A_x}_p}{\norm{x}_p} = \max\limits_{\norm{x}_p = 1} \norm{A_x}_p$;
+
+% Fakty.
+\entry
+$\norm{I} = 1$;
+\entry
+$\norm{Ax} \leq \norm{A} \cdot \abs{x}$;
+\entry
+$\norm{AB} \leq \norm{A} \cdot \norm{B}$;
+
+\entry
+$\norm{A}_1 \coloneqq \max\limits_j\sum\limits_i\abs{a_{ij}}$;
+
+\entry
+$\norm{A}_2 \coloneqq \max\set{\sqrt{\lambda} : \lambda\text{---wartość własna } A^TA}$;
+
+\entry
+$\norm{A}_\infty \coloneqq \max\limits_i\sum\limits_j\abs{a_{ij}}$;
+
+\entry
+Jeśli $\forall_{x} \norm{Ax}\leq c\norm{x}$, że $\exists_y \norm{Ay} = c\norm{y}$, to $c=\norm{A}$;
+
+\subsection{Normy macierzowe nieindukowane przez nor. wek.}
+
+\entry
+Norma Frobeniusa: $\norm{A}_F \coloneqq \sqrt{\sum_i\sum_j\abs{a_{ij}}^2}$; $\norm{I}_F=\sqrt{N}$;
+
+
