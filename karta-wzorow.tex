@@ -1,0 +1,40 @@
+\documentclass[10pt,a4paper,twocolumn]{article}
+
+\usepackage{multicol}
+\usepackage{amsbsy, amssymb, latexsym, amsmath, braket}
+\usepackage[tiny]{titlesec}
+\usepackage[hmargin=0.5cm,vmargin=1.0cm]{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage{polski}
+\usepackage{scalefnt}
+\usepackage[yyyymmdd,hhmmss]{datetime}
+\usepackage{commath}
+
+\newcommand{\entry}{$\bullet$\hspace{0.15em}}
+\newcommand{\subentry}{$\circledcirc$\hspace{0.15em}}
+% https://tex.stackexchange.com/a/7045/80219
+\newcommand{\textsubentry}[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=1pt] (char) {#1};\hspace{0.15em}}}
+
+\titlespacing{\section}{0pt}{0pt}{0pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+\titlespacing{\subsubsection}{0pt}{0pt}{0pt}
+
+% Wyłącz numerowanie stron.
+\pagenumbering{gobble}
+
+\setlength{\parindent}{0pt}
+% Odległość pomiędzy liniami. Zmniejsz, jeżeli brakuje miejsca.
+\setlength{\parskip}{0.5ex}
+
+\title{Karta wzorów z metod numerycznych}
+
+\begin{document}
+% Rozmiar czcionki.
+\scalefont{.8}
+
+\text{\tiny{
+    Wersja z \today\ o \currenttime\ (\pdfmdfivesum file{./karta-wzorow.tex})
+}}
+
+\end{document}
