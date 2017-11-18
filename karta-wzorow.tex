@@ -10,6 +10,12 @@
 \usepackage[yyyymmdd,hhmmss]{datetime}
 \usepackage{commath}
 
+% Definicje.
+% https://tex.stackexchange.com/a/138901/80219
+\newcommand{\Hsquare}{%
+  \text{\fboxsep=-.2pt\fbox{\rule{0pt}{1ex}\rule{1ex}{0pt}}}%
+}
+
 \newcommand{\entry}{$\bullet$\hspace{0.15em}}
 \newcommand{\subentry}{$\circledcirc$\hspace{0.15em}}
 % https://tex.stackexchange.com/a/7045/80219
@@ -38,5 +44,6 @@
 }}
 
 \input{src/uklady-rownan-liniowych.tex}
+\input{src/arytmetyka-fl.tex}
 
 \end{document}
