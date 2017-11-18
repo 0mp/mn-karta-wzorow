@@ -28,13 +28,13 @@ Fused multiply-add: $fl(FMA(a,b,c)) = fl(a \cdot b + c)$, gdzie $FMA(a,b,c)=a\cd
 % Błędy w obliczeniach numerycznych.
 
 \entry
-Błąd bezwzględny $=\norm{\widetilde{x} - x}$;
+Błąd bezwzględny $=\norm{\tilde{x} - x}$;
 
 \entry
 Błąd względny $=\frac{\text{błąd bezwzgl.}}{\norm{x}}$;
 
 \entry
-$P$---zadanie, $A$---algorytm; algorytm A jest silnie numerycznie poprawny (NP), jeśli $\widetilde{y} = P(\widetilde{x})$, gdzie $\frac{\norm{\widetilde{x}-x}}{x}\leq k\cdot\nu$. $\widetilde{y}$---dokładne rozw. dla trochę zaburzonych danych;
+Silna numeryczna poprawność (NP): algorytm $A$ jest silnie numerycznie poprawny (NP), jeśli $\tilde{y} = P(\tilde{x})$, gdzie $\norm{\tilde{x}-x} / x\leq k\cdot\nu$, $P$---zadanie, $\tilde{y}$---dokładne rozw. dla trochę zaburzonych danych;
 
 \entry
-Słaba num. poprawność (stabilność): daje prawie dokł. rozw. dla prawie dokł. danych: $\frac{\norm{\widetilde{x}-x}}{x}\leq k\cdot\nu$, $\frac{\norm{\widetilde{y}-P(\widetilde{x})}}{P(\widetilde{x})}\leq k\cdot\nu$;
+Słaba numeryczna poprawność (stabilność): daje prawie dokł. rozw. dla prawie dokł. danych: $\norm{\tilde{x}-x} / x\leq k\cdot\nu$, $\norm{\tilde{y}-P(\tilde{x})} / P(\tilde{x})\leq k\cdot\nu$;
