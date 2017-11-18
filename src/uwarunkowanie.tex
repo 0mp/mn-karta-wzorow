@@ -1,0 +1,42 @@
+\section{Uwarunkowanie zadania}
+
+\entry
+Wskaźnik uwarunkowania $P$ w punkcie $x$:\\ $\mathrm{cond}_{\mathrm{abs}}(P,x) \coloneqq \sup\limits_{\text{małe }\delta} \frac{\norm{P(x+\delta) - P(x)}}{\norm{\delta}}$;
+
+\entry
+$\norm{P(x+\delta)} \leq \mathrm{cond}_{\mathrm{abs}}(P,x)\norm{\delta}$;
+
+\entry
+$\mathrm{cond}_{\mathrm{rel}}(P,x) \coloneqq \sup\limits_{\text{małe }\delta} \frac{\norm{P(x+\delta) - P(x)} \cdot \norm{x}}{\norm{\delta} \cdot \norm{P(x)}}$;
+
+\entry
+$\frac{\norm{P(x+\delta) - P(x)}}{\norm{P(x)}} \leq \mathrm{cond}_{\mathrm{rel}}(P,x)\frac{\norm{\delta}}{\norm{x}}$;
+
+% Idealizacja.
+
+\entry
+$\mathrm{cond}_{\mathrm{abs}}(P,x) \coloneqq \lim\limits_{\norm{\delta \to 0}} \frac{\norm{P(x+\delta) - P(x)}}{\norm{\delta}}$;
+
+\entry
+$\mathrm{cond}_{\mathrm{rel}}(P,x) \coloneqq \mathrm{cond}_{\mathrm{abs}}(P,x)\frac{\norm{x}}{\norm{P(x)}} $;
+
+\entry
+Zadanie $P$ jest źle uwarunkowane w punkcie $x$, gdy $\mathrm{cond}(P,x) \gg 1$, bo małe zaburzenie danych może spowodować duży błąd wyniku;
+
+\entry
+Uwarunkowanie macierzy: $\mathrm{cond}(A) \coloneqq \norm{\vphantom{A^{-1}}A}\cdot\norm{A^{-1}}$;
+
+\entry
+Gdy $\epsilon\cdot\norm{\vphantom{A^1}A}\cdot\norm{A^{-1}} < \frac{1}{2}$, to $\frac{\norm{x - \tilde{x}}}{\norm{x}} \leq 4 \cdot \mathrm{cond}(A) \cdot \epsilon$;
+
+\entry
+Jeśli $\norm{B} < 1$, to $I+B$ odwracalna i $\norm{(I+B)^{-1}} \leq 1 / (1 - \norm{B})$;
+
+\entry
+Jeśli $A$ odwracalna i $\norm{A^{-1}\Delta} < 1$,\\ to $(A+\Delta)^{-1}$ istnieje i $\norm{(A+\Delta)^{-1}} \leq \frac{\norm{A^{-1}}}{1 - \norm{A^{-1}} \cdot \norm{\vphantom{A^1}\Delta}}$, gdzie $\Delta \leq \epsilon\norm{A}$;
+
+% TODO: Fakt o rozwiązaniu \tilde{x} układu Ax=b za pomocą LU z wyborem w kolumnie.
+
+% TODO: Numeryczne kryterium NP.
+
+% TODO: Przykłady zadań dobrze i źle uwarunkowanych.
