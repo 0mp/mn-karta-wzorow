@@ -14,10 +14,10 @@ Gdy $x$---l. maszynowa, to $fl(x)=x$, wpp. $fl(x)=ROUND(x)=RN(x)$, gdzie $RN(x)$
 Błąd reprezentacji: $\abs{fl(x) - x}$;
 
 \entry
-$\frac{\abs{fl(x) - x}}{\abs{x}}\leq 2^{-p}=\mu$, o ile nie ma *flow;
+$\frac{\abs{fl(x) - x}}{\abs{x}}\leq 2^{-p}=\nu$, o ile nie ma *flow;
 
 \entry
-$fl(x) = x(1+\epsilon_x)$, $\abs{\epsilon_x}\leq \mu$
+$fl(x) = x(1+\epsilon_x)$, $\abs{\epsilon_x}\leq \nu$
 
 \entry
 Standard fl gwarantuje, że $a \Hsquare b = fl(a\Hsquare b)$, jeżeli nie ma NaN, *flow;
@@ -34,7 +34,7 @@ Błąd bezwzględny $=\norm{\widetilde{x} - x}$;
 Błąd względny $=\frac{\text{błąd bezwzgl.}}{\norm{x}}$;
 
 \entry
-$P$---zadanie, $A$---algorytm; algorytm A jest silnie numerycznie poprawny (NP), jeśli $\widetilde{y} = P(\widetilde{x})$, gdzie $\frac{\norm{\widetilde{x}-x}}{x}\leq k\cdot\mu$. $\widetilde{y}$---dokładne rozw. dla trochę zaburzonych danych;
+$P$---zadanie, $A$---algorytm; algorytm A jest silnie numerycznie poprawny (NP), jeśli $\widetilde{y} = P(\widetilde{x})$, gdzie $\frac{\norm{\widetilde{x}-x}}{x}\leq k\cdot\nu$. $\widetilde{y}$---dokładne rozw. dla trochę zaburzonych danych;
 
 \entry
-Słaba num. poprawność (stabilność): daje prawie dokł. rozw. dla prawie dokł. danych: $\frac{\norm{\widetilde{x}-x}}{x}\leq k\cdot\mu$, $\frac{\norm{\widetilde{y}-P(\widetilde{x})}}{P(\widetilde{x})}\leq k\cdot\mu$;
+Słaba num. poprawność (stabilność): daje prawie dokł. rozw. dla prawie dokł. danych: $\frac{\norm{\widetilde{x}-x}}{x}\leq k\cdot\nu$, $\frac{\norm{\widetilde{y}-P(\widetilde{x})}}{P(\widetilde{x})}\leq k\cdot\nu$;
