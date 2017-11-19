@@ -32,9 +32,10 @@ Metoda Jacobiego: $M=\mathrm{diag}(A) = D$; zbieżna, gdy $A$ ma dominująca prz
 \entry
 Metoda Gaussa-Seidla: $a_{ii}x_i^{k+1}=b_i-\sum_{j>i}a_{ij}x^k-\sum_{j<i}a_{ij}x^{k+1}$; $M = LD$;
 
-% TODO: Dodaj informację o tau, gdy A=A^T>0.
 \entry
-Metoda Richardsona: $x_k+1 = x_k + \tau(b-Ax_k)$, gdzie $\tau\in\mathbb{R};
+Metoda Richardsona:
+$x_k+1 = x_k + \tau(b-Ax_k)$, gdzie $\tau\in\mathbb{R}$.
+Gdy $A=A^T>0$, to $\tau_{\mathrm{opt}}=\frac{2}{\lambda_{\mathrm{min}} + \lambda_{\mathrm{max}} }$;
 
 \subsection{Metody przestrzeni Kryłowa}
 
