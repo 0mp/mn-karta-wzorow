@@ -9,7 +9,7 @@ Metody bezpośrednie: r. LU z permutacją wierszy i kolumn, aby w czynnikach LU 
 \subsection{Metody stacjonarne}
 
 \entry
-$A=M-Z$, $Ax=Mx-Zx=b$, $Mx=b+Zx$, $Mx_{k+1}=b+Zx_{k}$ (iteracja prosta);
+$A=M-Z$, $Ax=Mx-Zx=b$, $Mx=b+Zx$, $Mx_{k+1}=b+Zx_{k}$ (iteracja prosta), $x_{k+1}=x_k+M^{-1}r-k$, gdzie $r_k=b-Ax_k$;
 
 \entry
 Metoda (**): $x_{k+1}=M^{-1}(b+Zx_k)$;
