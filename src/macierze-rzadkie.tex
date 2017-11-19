@@ -32,6 +32,15 @@ Metoda Jacobiego: $M=\mathrm{diag}(A) = D$; zbieżna, gdy $A$ ma dominująca prz
 \entry
 Metoda Gaussa-Seidla: $a_{ii}x_i^{k+1}=b_i-\sum_{j>i}a_{ij}x^k-\sum_{j<i}a_{ij}x^{k+1}$; $M = LD$;
 
-% TODO: Metody przestrzeni Kryłowa.
+\subsection{Metody przestrzeni Kryłowa}
+
+\entry
+$K$-ta iteracja: $x_k\in x_o+K_k$, gdzie $K_k\coloneqq \set{r_0, Ar_0,\ldots, A^{k-1}r_0}$, gdzie $r_0=b-Ax_0$;
+
+\entry
+Metody oparte na minimalizacji błędu: $x_k\in x_0 +K_k$ oraz $\norm{x_k - x^*}_B \forall x\in x_0 + K_k$;
+
+\entry
+Metody oparte na minimalizacji residuum: $\norm{b-Ax_k}_B \leq \norm{b-Ax}_B \forall x\in x_0 +K_k$, gdzie $B=B^T>0$;
 
 % TODO: Metoda gradientów sprzężonych (CG).
