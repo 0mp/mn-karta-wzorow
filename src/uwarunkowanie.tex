@@ -23,8 +23,15 @@ $\mathrm{cond}_{\mathrm{rel}}(P,x) \coloneqq \mathrm{cond}_{\mathrm{abs}}(P,x)\f
 \entry
 Zadanie $P$ jest źle uwarunkowane w punkcie $x$, gdy $\mathrm{cond}(P,x) \gg 1$, bo małe zaburzenie danych może spowodować duży błąd wyniku;
 
+% XXX: Czy to powinny być normy drugie?
 \entry
-Uwarunkowanie macierzy: $\mathrm{cond}(A) \coloneqq \norm{\vphantom{A^{-1}}A}\cdot\norm{A^{-1}}$;
+$\mathrm{cond}(A) \coloneqq \norm{\vphantom{A^{-1}}A}\cdot\norm{A^{-1}}$;
+
+\entry
+$A=A^T\in\mathbb{R}^{N\times N}$, to $\mathrm{cond}_2(A)\coloneqq \frac{\max_i\abs{\lambda_i}}{\min_i\abs{\lambda_i}}$;
+
+\entry
+$\exists_{v_i\neq 0} A_{v_i} = \lambda_i v_i$, gdzie $v_i$---wektor własny;
 
 \entry
 Gdy $\epsilon\cdot\norm{\vphantom{A^1}A}\cdot\norm{A^{-1}} < \frac{1}{2}$, to $\frac{\norm{x - \tilde{x}}}{\norm{x}} \leq 4 \cdot \mathrm{cond}(A) \cdot \epsilon$;
