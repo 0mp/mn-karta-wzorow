@@ -1,0 +1,34 @@
+\section{LZNK}
+
+% TODO: Opisać algorytm iteracyjnego poprawiania w modelowej sytuacji.
+
+\entry
+Jeżeli $\mathrm{cond}(A)$ jest niezbyt duże względem $\frac{1}{\nu}$, to modelowy algorytm IR jest zbieżny;
+
+\entry
+LZNK: układ $n$ równań z $m$ niewiadomymi.
+Cel: $\norm{b - Ax}_2 \to \min !$;
+% $\sum_i(\sum_ja_{ij}-b_i)^2 \to \min !$
+
+% TODO: Dodać rysunki macierzy.
+\entry
+Rozkład QR:
+$A = QR = Q_1R_1$;
+
+\entry
+Algorytm rozwiązywania LZNK przez rozkład QR:
+\textsubentry{1}
+$A=QR$
+\textsubentry{2}
+$\norm{b-Ax}^2_2 = \norm{Q^T_1b-R_1x}^2_2 + \norm{\tilde{Q}^Tb}^2_2 \to \min !$
+\textsubentry{3}
+Rozwiązaniem jest $x\in \mathbb{R}^m$ spełniający ukł. r-ń z macierzą trójkątną $R_1x=Q_1^Tb$.
+Koszt: $O(m^2)$.
+Koszt $Q_1^Tb$: $O(nm)$;
+
+% TODO: Wyznaczanie rozkładu QR metodą Householdera.
+% TODO: Definicja przekształcenia Householdera.
+% TODO: Odbicie Householdera.
+
+\entry
+Koszt rozkładu QR met. Householdera: $T(n,m)=2m^2n - \frac{2}{3}m^3$;
