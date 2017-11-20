@@ -24,3 +24,10 @@ make
 ```
 
 Wygenerowany plik pojawi się w katalogu `build`.
+
+---
+
+## Ważne
+
+- https://www.freebsd.org/
+- https://joinmastodon.org/
