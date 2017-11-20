@@ -43,7 +43,9 @@
 \scalefont{.8}
 
 \text{\tiny{
-    Wersja z \today\ o \currenttime\ (\pdfmdfivesum file{./karta-wzorow.tex})
+    Wersja
+    \input{|"git rev-list --count --first-parent HEAD"}z
+    \today\ o \currenttime\ (\pdfmdfivesum file{./karta-wzorow.tex})
 }}
 
 \input{src/uklady-rownan-liniowych.tex}
