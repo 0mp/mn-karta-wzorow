@@ -1,13 +1,11 @@
 \section{Uwarunkowanie zadania}
 
 \entry
-Wskaźnik uwarunkowania $P$ w punkcie $x$:\\ $\mathrm{cond}_{\mathrm{abs}}(P,x) \coloneqq \sup\limits_{\text{małe }\delta} \frac{\norm{P(x+\delta) - P(x)}}{\norm{\delta}}$;
+Wskaźnik u. $P$ w punkcie $x$:
+$\mathrm{cond}_{\mathrm{abs}}(P,x) \coloneqq \sup\limits_{\text{małe }\delta} \frac{\norm{P(x+\delta) - P(x)}}{\norm{\delta}}$;
 
 \entry
 $\norm{P(x+\delta)} \leq \mathrm{cond}_{\mathrm{abs}}(P,x)\norm{\delta}$;
-
-\entry
-$\mathrm{cond}_{\mathrm{rel}}(P,x) \coloneqq \sup\limits_{\text{małe }\delta} \frac{\norm{P(x+\delta) - P(x)} \cdot \norm{x}}{\norm{\delta} \cdot \norm{P(x)}}$;
 
 \entry
 $\frac{\norm{P(x+\delta) - P(x)}}{\norm{P(x)}} \leq \mathrm{cond}_{\mathrm{rel}}(P,x)\frac{\norm{\delta}}{\norm{x}}$;
@@ -21,35 +19,50 @@ $\mathrm{cond}_{\mathrm{abs}}(P,x) \coloneqq \lim\limits_{\norm{\delta \to 0}} \
 $\mathrm{cond}_{\mathrm{rel}}(P,x) \coloneqq \mathrm{cond}_{\mathrm{abs}}(P,x)\frac{\norm{x}}{\norm{P(x)}} $;
 
 \entry
-Zadanie $P$ jest źle uwarunkowane w punkcie $x$, gdy $\mathrm{cond}(P,x) \gg 1$, bo małe zaburzenie danych może spowodować duży błąd wyniku;
+Zadanie $P$ jest źle uwarunkowane w punkcie $x$,
+gdy $\mathrm{cond}(P,x) \gg 1$,
+bo małe zaburzenie danych może spowodować duży błąd wyniku;
 
 % XXX: Czy to powinny być normy drugie?
 \entry
 $\mathrm{cond}(A) \coloneqq \norm{\vphantom{A^{-1}}A}\cdot\norm{A^{-1}}$;
 
 \entry
-$A=A^T\in\mathbb{R}^{N\times N}$, to $\mathrm{cond}_2(A)\coloneqq \frac{\max_i\abs{\lambda_i}}{\min_i\abs{\lambda_i}}$;
+$A=A^T\in\mathbb{R}^{N\times N}$,
+to $\mathrm{cond}_2(A)\coloneqq \frac{\max_i\abs{\lambda_i}}{\min_i\abs{\lambda_i}}$;
 
 \entry
-$\exists_{v_i\neq 0} A_{v_i} = \lambda_i v_i$, gdzie $v_i$ --- wektor własny;
+$\exists_{v_i\neq 0} A_{v_i} = \lambda_i v_i$,
+gdzie $v_i$ --- wektor własny;
 
 \entry
-Gdy $\epsilon\cdot\norm{\vphantom{A^1}A}\cdot\norm{A^{-1}} < \frac{1}{2}$, to $\frac{\norm{x - \tilde{x}}}{\norm{x}} \leq 4 \cdot \mathrm{cond}(A) \cdot \epsilon$;
+Gdy $\epsilon\cdot\norm{\vphantom{A^1}A}\cdot\norm{A^{-1}} < \frac{1}{2}$,
+to $\frac{\norm{x - \tilde{x}}}{\norm{x}} \leq 4 \cdot \mathrm{cond}(A) \cdot \epsilon$;
 
 \entry
-Jeśli $\norm{B} < 1$, to $I+B$ odwracalna i $\norm{(I+B)^{-1}} \leq 1 / (1 - \norm{B})$;
+Jeśli $\norm{B} < 1$,
+to $I+B$ odwracalna i $\norm{(I+B)^{-1}} \leq 1 / (1 - \norm{B})$;
 
 \entry
-Jeśli $A$ odwracalna i $\norm{A^{-1}\Delta} < 1$,\\ to $(A+\Delta)^{-1}$ istnieje i $\norm{(A+\Delta)^{-1}} \leq \frac{\norm{A^{-1}}}{1 - \norm{A^{-1}} \cdot \norm{\vphantom{A^1}\Delta}}$, gdzie $\Delta \leq \epsilon\norm{A}$;
+Jeśli $A$ odwracalna i $\norm{A^{-1}\Delta} < 1$,
+to $(A+\Delta)^{-1}$ istnieje
+i $\norm{(A+\Delta)^{-1}} \leq \frac{\norm{A^{-1}}}{1 - \norm{A^{-1}} \cdot \norm{\vphantom{A^1}\Delta}}$,
+gdzie $\Delta \leq \epsilon\norm{A}$;
 
 % TODO: Fakt o rozwiązaniu \tilde{x} układu Ax=b za pomocą LU z wyborem w kolumnie.
 
 % Numeryczne kryterium NP.
 \entry
-Numeryczne kryterium NP: gdy $\tilde{x}$ przybliżonym rozw. $Ax=b$,\\ to $(A+\Delta)\tilde{x}=b+\delta$ i $\frac{\norm{\delta}}{\norm{b}}, \frac{\norm{\Delta}}{\norm{A}} \leq \epsilon$, gdzie $\epsilon \coloneqq \frac{\norm{b-A\tilde{x}}}{\norm{A} \cdot \norm{\tilde{x}} + \norm{b} }$;
+Numeryczne kryterium NP:
+gdy $\tilde{x}$ przybliżonym rozw. $Ax=b$,\\
+to $(A+\Delta)\tilde{x}=b+\delta$
+i $\frac{\norm{\delta}}{\norm{b}}, \frac{\norm{\Delta}}{\norm{A}} \leq \epsilon$,
+gdzie $\epsilon \coloneqq \frac{\norm{b-A\tilde{x}}}{\norm{A} \cdot \norm{\tilde{x}} + \norm{b} }$;
 
 % TODO: Przykłady zadań dobrze i źle uwarunkowanych.
 
 % Lemat.
 \entry
-$\norm{\Delta} < 1$, to $I + \Delta$ nieosobliwa oraz $\norm{(I + \Delta)^{-1}} \leq \frac{1}{1 - \norm{\Delta}}$;
+$\norm{\Delta} < 1$,
+to $I + \Delta$ nieosobliwa
+oraz $\norm{(I + \Delta)^{-1}} \leq \frac{1}{1 - \norm{\Delta}}$;
