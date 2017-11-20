@@ -12,18 +12,18 @@ Metody bezpośrednie: r. LU z permutacją wierszy i kolumn, aby w czynnikach LU 
 $A=M-Z$, $Ax=Mx-Zx=b$, $Mx=b+Zx$, $Mx_{k+1}=b+Zx_{k}$ (iteracja prosta), $x_{k+1}=x_k+M^{-1}r-k$, gdzie $r_k=b-Ax_k$;
 
 \entry
-Metoda (**): $x_{k+1}=M^{-1}(b+Zx_k)$;
+Metoda: $\mathrm{(**)}$ $x_{k+1}=M^{-1}(b+Zx_k)$,
+aby $Mx_{k+1}=\tilde{b}$ było łatwe;
 
 \entry
-Chcemy, aby $Mx_{k+1}=\tilde{b}$ było łatwe;
+Tw.: $\norm{M^{-1}Z} < 1$,
+to metoda $\mathrm{(**)}$ zbieżna do rozw. $Ax=b \forall x_0 \in \mathbb{R}^N$
 
 \entry
-Tw.: $\norm{M^{-1}Z} < 1$, to
-$\forall x_0 \in \mathbb{R}^N$
-metoda (**) zbieżna do rozw. $Ax=b$;
-
-\entry
-Tw.: $\forall x_0$, metoda (**) zbieżna do $x^* \leftrightarrow \rho(M^{-1}Z) < 1$, gdzie $\rho(B) \coloneqq \max\set{\abs{\lambda} : \lambda\text{---w. wł. } B}$;
+Tw.: $\forall x_0$,
+metoda $\mathrm{(**)}$
+zbieżna do $x^* \leftrightarrow \rho(M^{-1}Z) < 1$,
+gdzie $\rho(B) \coloneqq \max\set{\abs{\lambda} : \lambda\text{---w. wł. } B}$;
 
 % XXX: Da się więcej powiedzieć.
 \entry
