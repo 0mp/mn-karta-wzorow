@@ -17,7 +17,17 @@ LZNK: układ $n$ równań z $m$ niewiadomymi.
 Cel: $\norm{b - Ax}_2 \to \min !$;
 % $\sum_i(\sum_ja_{ij}-b_i)^2 \to \min !$
 
-% TODO: Uwarunkowanie LZNK.
+% Uwarunkowanie LZNK.
+\entry
+Uwarunkowanie LZNK:
+$\norm{\tilde{b} - \tilde{A}\tilde{x}}_2 \to \mathrm{min}!$
+i $\epsilon\coloneqq \max\set{ \frac{\norm{A - \tilde{A}}_2}{\norm{A}_2}, \frac{\norm{x - \tilde{x}}_2}{\norm{x}_2} }$
+tak małe, że $\mathrm{cond}_2(A)\cdot \epsilon < 1$,
+gdzie $\mathrm{cond}_2(A) = \frac{\sigma_{\max(A)}}{\min(A)}$.
+Wtedy zadanie ma 1 rozwiązanie i
+$\frac{\norm{x-\tilde{x}}_2}{\norm{x}_2} \leq  \epsilon \cdot \mathrm{cond}_{\mathrm{LZNK}}(A,b)+ O(\epsilon^2)$,
+gdzie $\mathrm{cond}_{\mathrm{LZNK}}(A,b) = \frac{2\mathrm{cond}_2(A)}{\cos\theta} + \tan\theta(\mathrm{cond}_2(A))^2$,
+gdzie $\sin\theta=\frac{\norm{b-Ax}_2}{\norm{b}_2}$;
 
 % Rozkład QR.
 \entry
