@@ -57,7 +57,8 @@ zbieżna, gdy $a_{ii}x_i^{k+1}=b_i-\sum_{j>i}a_{ij}x^k-\sum_{j<i}a_{ij}x^{k+1}$;
 Metoda Richardsona:
 $x_k+1 = x_k + \tau(b-Ax_k)$, gdzie $\tau\in\mathbb{R}$.
 Gdy $A=A^T>0$,
-to $\tau_{\mathrm{opt}}=\frac{2}{\lambda_{\mathrm{min}} + \lambda_{\mathrm{max}} }$;
+to $\tau_{\mathrm{opt}}=\frac{2}{\lambda_{\mathrm{min}} + \lambda_{\mathrm{max}} }$
+i $\gamma \coloneqq \norm{M^{-1}Z}=\abs{1-\lambda_{\mathrm{max}}\tau_{\mathrm{opt}}}=\frac{\mathrm{cond}_2(A)-1}{\mathrm{cond}_2(A) + 1}$;
 
 \subsection{Metody przestrzeni Kryłowa}
 
