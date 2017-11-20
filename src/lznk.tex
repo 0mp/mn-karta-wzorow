@@ -36,7 +36,20 @@ Koszt $Q_1^Tb$: $O(nm)$;
 
 % TODO: Wyznaczanie rozkładu QR metodą Householdera.
 % TODO: Definicja przekształcenia Householdera.
-% TODO: Odbicie Householdera.
+
+% Przekształcenie (metoda) Householdera.
+\entry
+Odbicie Householdera:
+$v\in \mathbb{R}^N$,
+$\gamma \coloneqq \frac{2}{\norm{v}^2_2} $,
+$H\coloneqq I-\gamma vv^T$ ortogonalna;
+
+\entry
+$H_m \cdots H_1 A = R$, $Q \coloneqq H_1 \cdots H_m$;
+
+\entry
+Obliczanie $y=Qz$:
+$y=z; \mathrm{for}(i=m,\ldots 1)\{y=H_iy\}$;
 
 \entry
 Koszt rozkładu QR met. Householdera: $T(n,m)=2m^2n - \frac{2}{3}m^3$;
