@@ -79,24 +79,14 @@ $A^TAx=A^Tb$;
 Rozkład SVD:
 $\forall A \in \mathbb{R}^{n\times m}, n \geq m \exists A=U_1\Sigma_1V^T$, gdzie
 $U_1^TU_1=V^TV=I$,
-$\Sigma_1 =\left[\begin{smallmatrix}
-    \sigma_i    &           & 0 \\
-                & \ddots    &   \\
-    0           &           & \sigma_m
-\end{smallmatrix}\right]
-$, gdzie
+$\Sigma_1 = \mathrm{diag}(\sigma_i)$, gdzie
 % TODO: Dodać brakujące założenia dotyczące wartości szczególnych.
 $\sigma_i \geq 0$ to wart. szczególna $A$;
 
 \entry
 Fakt:
 $A=A^T$, to mamy $A=U\Delta U^T$, gdzie $U$ to w. wł. $A$,
-$\Delta= \left[\begin{smallmatrix}
-    \lambda_1   &           & 0 \\
-                & \small\ddots    &   \\
-    0           &           & \lambda_n
-\end{smallmatrix}\right]
-$.
+$\Delta= \mathrm{diag}(\lambda_i)$.
 Wtedy SVD dla $A$ to $A=U\Sigma V^T$, gdzie
 $\sigma_i=\abs{\lambda_i}, v_i=\mathrm{sign}(\lambda_i)u_i$;
 
