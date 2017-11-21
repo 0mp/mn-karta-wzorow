@@ -1,20 +1,36 @@
 \section{Zadanie własne}
 
-% TODO: Metody numeryczne rozwiązywania zagadnienia własnego.
-
 % TODO: Metoda potęgowa.
 
+% Definicja zadania własnego.
 \entry
 Zadanie własne $A \in \mathbb{R}^{N \times N}$:
 $(\lambda,x) \in \mathbb{C} \times \mathbb{C}^N: Ax = \lambda x$;
 
+% Fakt o wartościach własnych (1).
 \entry
 Gdy $\lambda$ dla $A$, to $(\lambda - \mu)$ dla $A-\mu I$;
 
+% Fakt o wartościach własnych (2).
 \entry
 Gdy $\lambda$ dla $A$ nieos., to $\frac{1}{\lambda}$ dla $A^{-1}$;
 
-% TODO: Wniosek z powyższych faktów dla metody potęgowej.
+% Wniosek z powyższych faktów dla metody potęgowej.
+\entry
+Met. potęgowa zastosowana do
+$(A-\mu I)^{-1}$
+będzie zbieżna do
+$\lambda_i$,
+czyli w. wł. najbliższej $\mu$.
+Rzeczywiście, w. wł.
+$(A-\mu I)^{-1}$,
+to
+$\frac{1}{\lambda_j-\mu}$
+i jeśli
+$\frac{1}{\abs{\lambda_i-\mu}} > \frac{1}{\abs{\lambda_j-\mu}}, j\neq i$,
+to
+$\frac{1}{\lambda_i-\mu}$
+jest dominująca;
 
 % ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 % Zakres materiału do kolokwium.
