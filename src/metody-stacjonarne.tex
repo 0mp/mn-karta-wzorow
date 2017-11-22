@@ -1,0 +1,75 @@
+% Metody iteracyjne / stacjonarne.
+\section{Metody stacjonarne}
+
+% Ogólna idea metod stacjonarnych (1).
+\entry
+$A=M-Z$;
+\entry
+$Mx_{k+1}=b+Zx_{k}$
+\entry
+$x_{k+1}=x_k+M^{-1}r_k$, gdzie $r_k=b-Ax_k$;
+
+% Ogólna idea metod stacjonarnych (2).
+\entry
+Metoda: $\mathrm{(**)}$ $x_{k+1}=M^{-1}(b+Zx_k)$,
+aby $Mx_{k+1}=\tilde{b}$ było łatwe;
+
+% Twierdzenie o zbieżności metody iteracyjnej (1).
+\entry
+Tw.: $\norm{M^{-1}Z} < 1$,
+to metoda $\mathrm{(**)}$ zbieżna do rozw. $Ax=b \forall x_0 \in \mathbb{R}^N$
+
+% Twierdzenie o zbieżności metody iteracyjnej (2).
+\entry
+Tw.: $\forall x_0$,
+metoda $\mathrm{(**)}$
+zbieżna do $x^* \leftrightarrow \rho(M^{-1}Z) < 1$,
+gdzie $\rho(B) \coloneqq \max\set{\abs{\lambda} : \lambda\text{ --- w. wł. } B}$;
+
+% Przykładowy algorytm implementujący iterację.
+\entry
+$\mathrm{iter}(A,b,x_0,M,t)$:
+$x=x_0;
+r=b - Ax;
+(L,U,P) = lu(M);
+\mathrm{while}(\norm{r} > t) \{
+    p = M^{-1}r;
+    x=x+p;
+    r=b-Ax
+\};
+\mathrm{return}(x)
+$;
+$O(N^3 + \mathrm{\#iter} \cdot N^2)$;
+
+% Metoda Jacobiego.
+\entry
+Metoda Jacobiego:
+$M=\mathrm{diag}(A) = D$, $A=L+D+U$;
+zbieżna, gdy $A$ ma dominująca przekątną,
+tzn. $\abs{a_{ii}} > \sum_{j\neq i}\abs{a_{ij}} \forall i=1, \ldots, N$;
+
+% Metoda Gaussa-Seidla.
+\entry
+Metoda Gaussa-Seidla:
+$M = L + D$;
+zbieżna, gdy $a_{ii}x_i^{k+1}=b_i-\sum_{j>i}a_{ij}x^k-\sum_{j<i}a_{ij}x^{k+1}$;
+
+% Metoda Richardsona.
+\entry
+Metoda Richardsona:
+$x_k+1 = x_k + \tau(b-Ax_k)$, gdzie $\tau\in\mathbb{R}$.
+Gdy $A=A^T>0$,
+to $\tau_{\mathrm{opt}}=\frac{2}{\lambda_{\mathrm{min}} + \lambda_{\mathrm{max}} }$
+i $\gamma \coloneqq \norm{M^{-1}Z}=\abs{1-\lambda_{\mathrm{max}}\tau_{\mathrm{opt}}}=\frac{\mathrm{cond}_2(A)-1}{\mathrm{cond}_2(A) + 1}$;
+
+% Algorytm iteracyjnego poprawiania w modelowej sytuacji.
+\entry
+Modelowe IR:
+$\mathrm{for}(n=0,\ldots)\{ r_n=b-Ax_n; Ae_n=_{\mathrm{fl}}r_n; x_{n+1} = x_n + e_n \}$;
+
+% TODO: Dodać dowody zbieżności modelowego algorytmu.
+
+% Zbieżność modelowego algorytmu iteracyjnego poprawiania rozwiązania (IR, czyli iterative reconstruction)
+\entry
+Jeżeli $\mathrm{cond}(A)$ jest niezbyt duże względem $\frac{1}{\nu}$, to modelowy algorytm IR jest zbieżny;
+
