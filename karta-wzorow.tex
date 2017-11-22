@@ -19,6 +19,13 @@
   \text{\fboxsep=-.2pt\fbox{\rule{0pt}{1ex}\rule{1ex}{0pt}}}%
 }
 
+% Hack, który sprawia, że \cdot w wyrażeniu \norm{A}\cdot\norm{A} znajduje się
+% w równej odległości od obu norm. W przeciwnym wypadku \cdot znajduje się
+% dziwnie blisko prawej normy.
+% https://tex.stackexchange.com/a/99882/80219
+% https://tex.stackexchange.com/a/61511/80219
+\DeclareRobustCommand*{\norm}[1]{\|#1\|}
+
 \newcommand{\entry}{$\bullet$\hspace{0.15em}}
 \newcommand{\subentry}{$\circledcirc$\hspace{0.15em}}
 % https://tex.stackexchange.com/a/7045/80219
