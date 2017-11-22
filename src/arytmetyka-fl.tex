@@ -11,13 +11,12 @@ Liczby znormalizowane: $x=(-1)^s\cdot m \cdot 2^e$, gdzie $1\leq m < 2$;
 Gdy $x$ l. maszynową, to $\mathrm{fl}(x)=x$, wpp. $\mathrm{fl}(x)=\mathrm{ROUND}(x)=\mathrm{RN}(x)$, gdzie $\mathrm{RN}(x)$ zaokrągla do najbliższej l. maszynowej;
 
 \entry
+$\mathrm{fl}(x) = x(1+\varepsilon_x)$, $\abs{\varepsilon_x}\leq \nu$
+\entry
 Błąd reprezentacji: $\abs{\mathrm{fl}(x) - x}$;
 
 \entry
 $\frac{\abs{\mathrm{fl}(x) - x}}{\abs{x}}\leq 2^{-p}=\nu$, o ile nie ma *flow;
-
-\entry
-$\mathrm{fl}(x) = x(1+\varepsilon_x)$, $\abs{\varepsilon_x}\leq \nu$
 
 \entry
 Standard fl gwarantuje, że $a \Hsquare b = \mathrm{fl}(a\Hsquare b)$, jeżeli nie ma NaN, *flow;
