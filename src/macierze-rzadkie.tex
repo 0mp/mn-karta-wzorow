@@ -71,6 +71,17 @@ Gdy $A=A^T>0$,
 to $\tau_{\mathrm{opt}}=\frac{2}{\lambda_{\mathrm{min}} + \lambda_{\mathrm{max}} }$
 i $\gamma \coloneqq \norm{M^{-1}Z}=\abs{1-\lambda_{\mathrm{max}}\tau_{\mathrm{opt}}}=\frac{\mathrm{cond}_2(A)-1}{\mathrm{cond}_2(A) + 1}$;
 
+% Algorytm iteracyjnego poprawiania w modelowej sytuacji.
+\entry
+Modelowe IR:
+$\mathrm{for}(n=0,\ldots)\{ r_n=b-Ax_n; Ae_n=_{\mathrm{fl}}r_n; x_{n+1} = x_n + e_n \}$;
+
+% TODO: Dodać dowody zbieżności modelowego algorytmu.
+
+% Zbieżność modelowego algorytmu iteracyjnego poprawiania rozwiązania (IR, czyli iterative reconstruction)
+\entry
+Jeżeli $\mathrm{cond}(A)$ jest niezbyt duże względem $\frac{1}{\nu}$, to modelowy algorytm IR jest zbieżny;
+
 \subsection{Metody przestrzeni Kryłowa}
 
 % Definicja iteracji w metodach przestrzeni Kryłowa.
