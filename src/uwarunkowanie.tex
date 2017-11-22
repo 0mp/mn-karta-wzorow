@@ -40,8 +40,8 @@ gdzie $v_i$ --- wektor własny;
 
 \entry
 Gdy
-$\epsilon\cdot\mathrm{cond}(A) < \frac{1}{2}$,
-to $\frac{\norm{x - \tilde{x}}}{\norm{x}} \leq 4 \cdot \mathrm{cond}(A) \cdot \epsilon$;
+$\varepsilon\cdot\mathrm{cond}(A) < \frac{1}{2}$,
+to $\frac{\norm{x - \tilde{x}}}{\norm{x}} \leq 4 \cdot \mathrm{cond}(A) \cdot \varepsilon$;
 
 \entry
 Jeśli $\norm{B} < 1$,
@@ -51,7 +51,7 @@ to $I+B$ odwracalna i $\norm{(I+B)^{-1}} \leq 1 / (1 - \norm{B})$;
 Jeśli $A$ odwracalna i $\norm{A^{-1}\Delta} < 1$,
 to $(A+\Delta)^{-1}$ istnieje
 i $\norm{(A+\Delta)^{-1}} \leq \frac{\norm{A^{-1}}}{1 - \norm{A^{-1}} \cdot \norm{\vphantom{A^1}\Delta}}$,
-gdzie $\Delta \leq \epsilon\norm{A}$;
+gdzie $\Delta \leq \varepsilon\norm{A}$;
 
 % Fakt o rozwiązaniu \tilde{x} układu Ax=b za pomocą LU z wyborem w kolumnie.
 \entry
@@ -66,8 +66,8 @@ gdzie $a^{(k)}_{i,j}$ to wyraz macierzy w $k$-tym kroku LU. W praktyce wskaźnik
 Numeryczne kryterium NP:
 gdy $\tilde{x}$ przybliżonym rozw. $Ax=b$,\\
 to $(A+\Delta)\tilde{x}=b+\delta$
-i $\frac{\norm{\delta}}{\norm{b}}, \frac{\norm{\Delta}}{\norm{A}} \leq \epsilon$,
-gdzie $\epsilon \coloneqq \frac{\norm{b-A\tilde{x}}}{\norm{A} \cdot \norm{\tilde{x}} + \norm{b} }$;
+i $\frac{\norm{\delta}}{\norm{b}}, \frac{\norm{\Delta}}{\norm{A}} \leq \varepsilon$,
+gdzie $\varepsilon \coloneqq \frac{\norm{b-A\tilde{x}}}{\norm{A} \cdot \norm{\tilde{x}} + \norm{b} }$;
 
 % TODO: Przykłady zadań dobrze i źle uwarunkowanych.
 
