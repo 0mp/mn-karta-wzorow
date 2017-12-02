@@ -2,6 +2,12 @@
 
 ## Instalacja pakietu LaTeX
 
+### FreeBSD 12.0-CURRENT
+
+```bash
+pkg install texlive-full
+```
+
 ### macOS
 
 Zainstaluj `pdflatex` z dystrybucji `mactex`:
