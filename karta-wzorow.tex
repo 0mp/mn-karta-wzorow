@@ -26,6 +26,15 @@
 % https://tex.stackexchange.com/a/61511/80219
 \DeclareRobustCommand*{\norm}[1]{\|#1\|}
 
+% Makra pomocnicze.
+% Element najlepszej aproksymacji (ENA), zazwyczaj wyróżniany gwiazdką
+% w górnym indeksie.
+\newcommand{\ena}[1]{#1^{*}}
+\newcommand{\enain}[2]{#1^{*} \in #2}
+\newcommand{\forallin}[2]{\forall_{#1 \in #2}}
+\newcommand{\existsin}[2]{\exists_{#1 \in #2}}
+\newcommand{\maxin}[2]{\max_{#1 \in #2}}
+
 \newcommand{\entry}{$\bullet$\hspace{0.15em}}
 \newcommand{\subentry}{$\circledcirc$\hspace{0.15em}}
 % https://tex.stackexchange.com/a/7045/80219
@@ -66,6 +75,7 @@
 \input{src/zadanie-wlasne.tex}
 % \input{src/sztuczki.tex}
 
+\input{src/aproksymacja-funkcji} % Wykład 21.12.
 \input{src/aproksymacja-jednostajna.tex} % Wykład 11.01.
 \input{src/rownania-nieliniowe.tex} % Wykład 18.01.
 
