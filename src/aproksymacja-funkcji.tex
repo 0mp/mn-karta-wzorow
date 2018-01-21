@@ -1,0 +1,143 @@
+\section{Aproksymacja funkcji}
+
+% Problem zadania najlepszej aproksymacji.
+\entry
+$f \in F$
+(przestrzeń unormowana).
+Szukamy
+$\enain{v}{V \subset F}$,
+który najlepiej przybliża $f$ wśród wszystkich elementów z $V$:
+$\norm{f - \ena{v}} \leq \norm{f-v} \forallin{v}{V}$,
+$\ena{v}$: ENA;
+
+% Fakt o istnieniu ENA.
+\entry
+$F$ przestrzenią liniową, 
+$V \subset F$ podprzestrzenią liniową skończonego wymiaru, to
+$\forall{f \in F} \ \exists{\enain{v}{V}}$;
+
+% Normy.
+\entry
+Normy:
+\subentry
+$L^1(a,b)$: 
+$\norm{f}_1 \coloneqq \int^b_a\abs{f(t)} dt$;
+\subentry
+$L^2(a,b)$: 
+$\norm{f}_2 \coloneqq (\int^b_a\abs{f(t)}^2 dt)^{1/2}$;
+\subentry
+$C^0(a,b)$: 
+$\norm{f}_\infty \coloneqq \maxin{t}{[a,b]} \abs{f(t)}$;
+\subentry
+$L^2_\rho(a,b)$: 
+$\norm{f}_{2, \rho} \coloneqq (\int^b_a\abs{f(t)}^2 \rho(t) \ dt)^{1/2}$,
+gdzie
+$\rho t > na [a,b]$
+(pewna skończona liczba punktów, gdzie się zeruje);
+
+% TODO: Przykładowe własności powyższych norm.
+
+\entry
+$t_{\text{opt}}, t_v \in [a,b]$:
+\subentry
+$l_1$ (dyskretna)
+$\sum^n_{i=0} \abs{f(t_i)}$;
+\subentry
+$l_2$ (\dittotikz)
+$(\sum^n_{i=0} \abs{f(t_i)}^2)^(1/2)$;
+\subentry
+$l_{C_0}$ (\dittotikz)
+$max_{i = 0,\ldots,n} \abs{f(t_i)}$;
+\subentry
+$l_2$ (dyskretna ważona)
+$(\sum^n_{i=0} \rho_i\abs{f(t_i)}^2)^(1/2), \rho_i>0$;
+
+% Aproksymacja w przestrzeni unitarnej.
+\entry
+Niech $H$ to przestrzeń liniowa z iloczynem skalarnym 
+$(x,y)$ dla $x, y \in H$
+\subentry
+$H \coloneqq \mathbb{R}^n$:
+$(x,y) \coloneqq x^T y$;
+\subentry
+$H \coloneqq C^0[a;b]$:
+$(f,g) \coloneqq \int^b_a f(t)g(t) \ dt$;
+\subentry
+Iloczyn skalarny indukuje normę w $H$:
+$\norm{f} \coloneqq \sqrt{(f,f)}$;
+
+% Twierdzenie o charakteryzacji ENA w przestrzeni unitarnej.
+% TODO: Przykłady przestrzeni unitarnych (np. Hilberta).
+\entry
+Tw. (o charakteryzacji ENA w pni unitarnej):
+Niech $V \subset H$ będzie podpnią liniową w $H$:
+$\enain{v}{V}$ jest ENA dla $f \in H$
+$\leftrightarrow$
+$(f - \ena{v}, v) = 0 \forallin{v}{V}$;
+
+% Wniosek z twierdzenia o charakteryzacji ENA w przestrzeni unitarnej.
+\entry
+Jeśli $V$ jest skończonego wymiaru, to ENA istnieje i jest jedyny.
+Gdy $\set{v_i}^n_{i=1}$ są bazą pni $V$, to
+$\ena{v} = \sum^n_{i=1} \ena{\alpha}_i v_i$
+i współczynniki $\set{\ena{\alpha}_i}$
+spełniają układ równań normalnych:
+$\sum \ena{\alpha}_i (v_i, v_j) = (f, v_j)$;
+
+\entry
+$[(v_i, v_j)]^n_{i,j=1}$
+jest symetryczna i dodatnio określona (macierz Grama), 
+więc ma dokładnie 1 rozwiązanie;
+
+% Macierz Grama.
+\entry
+Macierz Grama: zazwyczaj gęsta i źle uwarunkowana, SPD (więc alg. Choleskiego);
+
+% Macierz Grama dla przestrzeni z bazą ortogonalną.
+\entry
+Wybierając bazę ortogonalną w $V = \text{span}\set{p_i}^n_{i=1}$,
+gdzie $(p_i, p_j) = 0, i \neq j$, dostajemy macierz Grama
+$[(p_i, p_i)]$, 
+$\ena{v} = \sum((f,p_i)\cdot p_i)/(p_i, p_i)$,
+a gdy $\set{p_i}^n_{i=1}$ unormowane:
+$\ena{v} = \sum(f,p_i)\cdot p_i$;
+
+% Definicja wielomianów ortogonalnych dla L^2_\rho.
+\entry
+$L^2_\rho(a;b)$:
+$(f,g) \coloneqq \int^b_a f(x)g(x)\rho(x) \ dx$,
+$\rho$ to funkcja wagowa $\rho > 0$ na $[a;b]$ 
+(w skończonej liczbie punktów może się zerować);
+$\norm{f}^2_\rho \coloneqq (f,f)^{1/2}$;
+
+% Formuła trójczłonowa.
+\entry
+Wielomiany $\mathbb{P}_k, k=0,\ldots$ postaci 
+$P_k = x^k + o(x^k)$ wyrażają się wzorem:
+$P_k(x) = (x + \beta_k) \cdot P_{k-1}(x) + \gamma_k P_{k-2}(x), k=1,\ldots$,
+$P_{-1}(x)=0$, 
+$P_{0}(x)=1$,
+$\beta_k= \frac{(x P_k-1, P_k)}{\norm{P_{k-1}}^2}$,
+$\gamma_k = \frac{(x P_k-1, P_{k-2})}{\norm{P_{k-2}}^2}$,
+% TODO: Fragmenty dowodu.
+
+% Wielomiany Lagrange'a
+\entry
+Wielomiany Lagrange'a:
+ort. w $L^2(-1,1)$ z wagą $\rho = 1$:
+$L_k(x) = \frac{2k-1}{k}xL_{k-1} - \frac{k-1}{k}L_{k-2}$,
+$\norm{L_k}^2=\frac{2}{2k+1}$;
+
+% Wielomiany Hermite'a.
+\entry
+Wielomiany Hermite'a:
+$L^2_\rho(-\infty, \infty), \rho(x)=e^{-x^2}$,
+$H_k(x) = 2xH_{k-1}(x) - (2k-2) H_{k-2}(x), H_0(x) \equiv 1$,
+$\norm{H_k}^2 = \sqrt{\pi}2^kk!$;
+
+% Wielomiany Czebyszewa.
+\entry
+Wielomiany Czebyszewa:
+$L_\rho^2(-1,1), \rho(x)=\frac{1}{\sqrt{1-x^2}}$,
+$T_k(x) = 2xT_{k-1}(x) - T_{k-2}(x), T_0(x)\equiv 1$,
+$\norm{T_k}^2 = \pi \text{ if } k=0 \text{ else } \pi/2$;

@@ -26,6 +26,19 @@
 % https://tex.stackexchange.com/a/61511/80219
 \DeclareRobustCommand*{\norm}[1]{\|#1\|}
 
+% Symbol "jak wyżej".
+% https://tex.stackexchange.com/a/53844
+\newcommand{\dittotikz}{%
+    \tikz{
+        % Pionowe kreski.
+        \draw [line width=0.12ex] (-0.2ex,0) -- +(0,0.8ex)
+            (0.2ex,0) -- +(0,0.8ex);
+        % Poziome kreski.
+        \draw [line width=0.08ex] (-0.6ex,0.4ex) -- +(-0.8em,0)
+            (0.6ex,0.4ex) -- +(0.8em,0);
+    }%
+}
+
 % Makra pomocnicze.
 % Element najlepszej aproksymacji (ENA), zazwyczaj wyróżniany gwiazdką
 % w górnym indeksie.
