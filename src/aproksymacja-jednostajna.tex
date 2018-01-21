@@ -1,0 +1,97 @@
+\section{Aproksymacja jednostajna}
+
+% Aproksymacja jednostajna, norma supremum.
+\entry
+$\norm{g}_\infty \coloneqq max_{x \in [a;b]} \abs{g(x)}$;
+
+% Formuła trójczłonowa na wielomiany Czebyszewa.
+% XXX: Czy jest poprawna?
+\entry
+Formuła trójczłonowa:
+$T_{k + 1} = 2T_1(x)T_k(x) - T_{k-1}(x)$,
+$T_1(x) = \cos(1 \cdot \theta)=x$,
+$T_0(x) = 1$;
+
+% Wniosek z formuły trójczłonowej.
+\entry
+$\abs{T_k(x)} \leq 1$
+dla
+$\abs{x} \leq 1$;
+
+% Fakt o miejscach zerowych k-tego wielomianu Czebyszewa.
+\entry
+Miejsca zerowe $k$-tego wielomianu Czebyszewa są rzeczywiste, jednokrotne i przedziale $(-1;1)$: 
+$x_j \coloneqq \cos(\frac{2j-1}{2k}\pi)$, 
+$j=1,\ldots,k$;
+
+% Fakt o lokalnych ekstremach k-tego wielomianu Czebyszewa.
+\entry
+Lokalne ekstrema $T_k$ w przedziale $[-1;1]$ są dane wzorem:
+$y_j \coloneqq \cos \frac{j\pi}{k}$,
+$j=1,\ldots,k$.
+Pondato
+$T_k(y_j) = (-1)^j$;
+
+% Twierdzenie o własności minimaksu.
+\entry
+Tw. (właśność minimaksu):
+Spośród wszystkich wielomianów stopnia $k$ postaci
+$1 \cdot x^k + o(x^k)$.
+Wielomian 
+$\frac{1}{2^{k-1}} T_k(x)$
+ma najmniejszą normę maksimum na [-1;1].
+Tzn.
+$\max_{x \in [-1;1]} \abs{\frac{1}{2^{k-1}} T_k(x)} \leq 
+\max_{x \in [-1;1]} \abs{w(x)} 
+\forall w(x) = x^k + o(x^k)$;
+
+% Węzły Czebyszewa w interpolacji wielomianowej Lagrange'a.
+\entry
+$\norm{f-w}_{\infty, [a,b]} \leq 
+\frac{\norm{f^{(n+1)}}_{\infty, [a,b]}}{(n+1)!} 
+\norm{(x-x_0) \cdots (x - x_n)}_\infty$, 
+gdzie
+$\max_{x\in[a,b] (x-x_0)\cdots(x-x_n)}$
+jest najmniejszy dla 
+$[a,b] = [-1,1]$,
+gdy $x_i$ to miejsca zerowe $T_{n + 1}(x)$.
+Dla dowolnego $[a,b]$ zachodzi analogiczny fakt dla węzłów Czebyszewa 
+przeskalowanych liniowo na $[a,b]$:
+$x \in [-1,1] \rightarrow [a,b] \ni \xi(x) = Ax + B$,
+$x_i \mapsto \xi(x_i)$;
+
+% Zadanie aproksymacji jednostajnej wielomianami.
+\entry
+$f \in C[a,b]$.
+$\exists p^{*} \in \mathbb{P}_n$ 
+najepszej aproksymacji dla $f$ w sensie normy supremum na $[a,b]$, że
+$\norm{f - p^{*}}_\infty \leq \norm{f - p}_\infty \forall p\in \mathbb{P}_n$;
+
+% Twierdzenie Czebyszewa o alternansie
+\entry
+Tw. (Czebyszewa o alternansie):
+$p^{*} \in \mathbb{P}_n$
+jest ENA dla $f$
+$\leftrightarrow$
+istnieją co najmniej $n+2$ punkty $x_i$ w $[a,b]$, że
+$f(x_i) - p^{*}(x_i) = \varepsilon \cdot (-1)^i \cdot \norm{f - p^{*}}_\infty$,
+$\varepsilon \in \set{-1,+1}$;
+($\abs{f(x_i) - p^{*}(x_i)} = \norm{f - p^{*}}_\infty$);
+
+% Twierdzenie o jednoznaczności optymalnego wielomianowej aproksymacji jednostajnej.
+\entry
+Istnieje dokładnie 1 ENA dla zadanej 
+$f\in C[a,b]$ 
+w sensie aproksymacji jednostajnej;
+
+% TODO: Wyznaczanie ENA dla wielomianowej jednostajnej nieskończonym algorytmem interacyjnym Rameza.
+
+% Fakt o błędzie najlepszej aproksymacji.
+% TODO: Formuła barycentryczna na w(x).
+\entry
+$f \in C[-1,1]$,
+$w$ --- w. i. L. dla $f$ opartej na w. Cz.:
+$E_n \leq
+\norm{f - w}_\infty \leq
+(2 + 2 \ln(n + 1) / \pi)\cdot E_n <_{n \leq 10^5}
+10\cdot E_n$;
