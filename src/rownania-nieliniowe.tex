@@ -19,7 +19,14 @@ Metoda Newtona:
 $f(x) = 0 = f(x+h) = f(x) + f'(x)h + (f''(x)h^2/2+\cdots$;
 $x_{n+1} = x_n - f(x_n)/f'(x_n)$;
 
-% TODO: Twierdzenie o zbieżności metody Newtona.
+% Twierdzenie o zbieżności metody Newtona.
+\entry
+Tw. (zbieżność m. N.):
+$f \in C^2[a;b], \exists \ena{x} \in (a;b)$,
+że $f(\ena{x})=0, f'(\ena{x}) \neq 0$.
+Wtedy $\exists_{U \ni \ena{x}}$, że m. N. zbieżna do $\ena{x} \ \forall_{x_0 \in U}$.
+Ponadto zbieżność kwadratowa:
+$\exists_{c>0} \abs{x_{n+1} - \ena{x}} \leq c \abs{x_n - \ena{x}}^2 \forall_{n=0,\ldots}$;
 
 % TODO: Metoda Herona.
 
