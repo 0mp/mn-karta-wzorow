@@ -24,9 +24,21 @@ $x_{n+1} = x_n - f(x_n)/f'(x_n)$;
 Tw. (zbieżność m. N.):
 $f \in C^2[a;b], \exists \ena{x} \in (a;b)$,
 że $f(\ena{x})=0, f'(\ena{x}) \neq 0$.
-Wtedy $\exists_{U \ni \ena{x}}$, że m. N. zbieżna do $\ena{x} \ \forall_{x_0 \in U}$.
+Wtedy $\exists{U \ni \ena{x}}$, że m. N. zbieżna do $\ena{x} \ \forall_{x_0 \in U}$.
 Ponadto zbieżność kwadratowa:
 $\exists_{c>0} \abs{x_{n+1} - \ena{x}} \leq c \abs{x_n - \ena{x}}^2 \forall_{n=0,\ldots}$;
+
+% Własności metody Newtona.
+\entry
+Własności m. N.:
+\subentry
+$f$ musi być różniczkowalna;
+\subentry
+musi być znany wzór na pochodną;
+\subentry
+$f'(\ena{x}) \neq 0 \Rightarrow \ena{x}$ zerem jednokrotnym i gdy krotności $m$, 
+to metoda zbiega liniowo do 
+$\abs{x_{n+1} - \ena{x}} \approx (1-1/m) \cdot \abs{x_n - \ena{x}}$;
 
 % TODO: Metoda Herona.
 
