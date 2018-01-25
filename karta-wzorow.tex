@@ -54,9 +54,12 @@
 \newcommand{\textsubentry}[1]{\tikz[baseline=(char.base)]{
             \node[shape=circle,draw,inner sep=1pt] (char) {#1};\hspace{0.15em}}}
 
-\titlespacing{\section}{0pt}{0pt}{0pt}
-\titlespacing{\subsection}{0pt}{0pt}{0pt}
-\titlespacing{\subsubsection}{0pt}{0pt}{0pt}
+\newcommand{\mnsection}[1]{
+
+    \hrulefill
+    \textbf{{#1}}
+    \hrulefill
+}
 
 % Wyłącz numerowanie stron.
 \pagenumbering{gobble}
