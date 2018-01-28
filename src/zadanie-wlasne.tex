@@ -42,7 +42,23 @@ jest dominująca;
 % ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 % Zakres materiału do kolokwium.
 
-% TODO: Odwrotna metoda potęgowa.
+% Odwrotna metoda potęgowa.
+% (MP: 16 XI/1.5/2)
+\entry
+\textbf{Odw. m. pot.}:
+$\text{for } k=0,\ldots$:
+$x_{k+1} = (A-\mu I)^{-1}x_k$;
+$x_{k+1} = x_{k+1} / \norm{x_{k+1}}$;
+$\mathcal{O}(n^3)$;
+% Praktyczny algorytm implementujący odwrotna metodę potęgową.
+\entry
+Szybciej:
+$P(A- \mu I = LU$ (lub $A-\mu I = QR$) ($\mathcal{O}{n^3}$);
+$\text{for } k=0,\ldots$:
+$Ly=Px_k$;
+$Ux_{k+1} = y$;
+$x_{k+1} = x_{k+1} / \norm{x_{k+1}}$;
+($\mathcal{O}(kN^2)$)
 
 % TODO: Metoda Rayleigh (RQI).
 
