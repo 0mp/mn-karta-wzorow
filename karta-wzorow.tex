@@ -75,6 +75,11 @@
 % Na przykład: $\deriv{w}{k}$
 \newcommand{\deriv}[2]{#1^{(#2)}}
 
+% Zbiór węzłów interpolacyjncyh.
+% Indeksy po lewej: https://tex.stackexchange.com/a/64612/80219
+% Na przykład: $\ipoints[i=0][n][a][b]{x_i}$
+\DeclareDocumentCommand{\ipoints}{O{} O{} O{} O{} m}{\prescript{#4}{#3}{\set{#5}}^{#2}_{#1}}
+
 \newcommand{\entry}{$\bullet$\hspace{0.15em}}
 \newcommand{\subentry}{$\circledcirc$\hspace{0.15em}}
 % https://tex.stackexchange.com/a/7045/80219
