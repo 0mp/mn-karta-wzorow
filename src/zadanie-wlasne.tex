@@ -1,13 +1,5 @@
 \mnsection{Zadanie własne}
 
-% Metoda potęgowa wyznaczania wektora własnego.
-% (9 XI/4.5/43)
-\entry
-M. pot.:
-$\abs{\lambda_1} \!>\! \abs{\lambda_2} \!\geq\! \ldots \!\geq\! \abs{\lambda_n}
-\Rightarrow
-\fromloop{k}\{x_{k+1}=Ax_k; \normifyfrac[\infty][2]{x_{k+1}}\}$;
-
 % Definicja zadania własnego.
 \entry
 Zadanie własne $A \in \mathbb{R}^{N \times N}$:
@@ -22,15 +14,23 @@ Gdy $\lambda$ dla $A$, to $(\lambda - \mu)$ dla $A-\mu I$;
 \entry
 Gdy $\lambda$ dla $A$ nieos., to $\frac{1}{\lambda}$ dla $A^{-1}$;
 
+% Metoda potęgowa wyznaczania wektora własnego.
+% (9 XI/4.5/43)
+\entry
+\textbf{M}. \textbf{pot}.:
+$\abs{\lambda_1} \!>\! \abs{\lambda_2} \!\geq\! \ldots \!\geq\! \abs{\lambda_n}
+\!\!\Rightarrow\!
+\fromloop{k}\{x_{k+1}=Ax_k; \normifyfrac[\infty][2]{x_{k+1}}\}$;
+
 % Wniosek z powyższych faktów dla metody potęgowej.
 \entry
-Met. potęgowa zastosowana do
+M. pot. zastosowana do
 $(A-\mu I)^{-1}$
 będzie zbieżna do
 $\lambda_i$,
 czyli w. wł. najbliższej $\mu$.
 Rzeczywiście, w. wł.
-$(A-\mu I)^{-1}$,
+$(A-\mu I)^{-1}$
 to
 $\frac{1}{\lambda_j-\mu}$
 i jeśli
@@ -38,9 +38,6 @@ $\frac{1}{\abs{\lambda_i-\mu}} > \frac{1}{\abs{\lambda_j-\mu}}, j\neq i$,
 to
 $\frac{1}{\lambda_i-\mu}$
 jest dominująca;
-
-% ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-% Zakres materiału do kolokwium.
 
 % Odwrotna metoda potęgowa.
 % (MP: 16 XI/1.5/2)
