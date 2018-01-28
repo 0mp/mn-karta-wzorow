@@ -63,6 +63,7 @@
 %   * potęga przy normie (opcjonalnie)
 % Przykład: $\normify[\infty][2]{x_{k+1}}$
 \DeclareDocumentCommand{\normify}{ O{} O{} m}{#3 = #3 / \norm{#3}_{#1}^{#2}}
+\DeclareDocumentCommand{\normifyfrac}{ O{} O{} m}{#3 = \frac{#3}{ \norm{#3}_{#1}^{#2}}}
 
 % Przydate do pętli iterujących nieznaną liczbę razy.
 % Obowiązkowy argument to iterator, a opcjonalny argument to jego wartość
