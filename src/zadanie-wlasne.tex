@@ -69,10 +69,19 @@ $\lambda_k \coloneqq x_k^T A x_k / x_k^T x_k$.
 Gdy $x_k = v$:
 $v^T A v / v^T v = v^T \lambda v / v^T v = \lambda$;
 
+% Metoda Rayleigh (RQI).
+% (MP: 16 XI/2/24)
+\entry
+\textbf{M. Rayleigh} (RQI):
+$\text{for } k=0,\ldots$:
+$x_{k+1} = (A - \mu_k I)^{-1} x_k$;
+$x_{k+1} = x_{k+1} / \norm{x_{k+1}}$;
+$\mu_{k+1} = x_{k+1}^T A x_{k+1}$.
+Zbiega $\cdot^3$, a coraz gorsze uwarunkowanie ($A-\mu_k I$) pomaga.
+Po $3$ iteracjach precyzja arytmetyki.
+
 % TODO: Wartości własne macierzy blokowo-trójkątnej.
 % (MP: 16 XI/2.5/3)
-
-% TODO: Metoda Rayleigh (RQI).
 
 % TODO: Fakty o lokalizacji wartości własnych.
 
