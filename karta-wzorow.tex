@@ -11,6 +11,7 @@
 \usepackage{commath}
 \usepackage{mathtools}
 \usepackage{tikz}
+\usepackage{xparse}
 \usetikzlibrary{tikzmark}
 
 % Definicje.
@@ -54,6 +55,14 @@
 % Uwarunkowanie. Opcjonalny argument służy do podania normy.
 % Na przykład: $\cond[2]{A}$.
 \newcommand{\cond}[2][]{\mathrm{cond}_{#1}(#2)}
+
+% Unormowanie wektora.
+% Argumenty:
+%   * wektor
+%   * oznaczenie normy (opcjonalnie)
+%   * potęga przy normie (opcjonalnie)
+% Przykład: $\normify[\infty][2]{x_{k+1}}$
+\DeclareDocumentCommand{\normify}{ O{} O{} m}{#3 = #3 / \norm{#3}_{#1}^{#2}}
 
 % Przydate do pętli iterujących nieznaną liczbę razy.
 % Obowiązkowy argument to iterator, a opcjonalny argument to jego wartość
