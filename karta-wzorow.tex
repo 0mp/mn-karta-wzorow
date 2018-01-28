@@ -51,10 +51,9 @@
 % Krótkie \abs. Przydatne, gdy standardowe \abs wygląda niezgrabnie.
 \newcommand{\shortabs}[1]{\mid\! #1\! \mid}
 
-% Uwarunkowanie. Opcjonalny argument służy do podania ewentualnego określenia,
-% czy mowa o uwarunkowaniu względnym, czy bezwzględnym.
-% Na przykład: $\cond[abs](A)$.
-\newcommand{\cond}[2][]{\mathrm{cond}_{\mathrm{#1}}(#2)}
+% Uwarunkowanie. Opcjonalny argument służy do podania normy.
+% Na przykład: $\cond[2](A)$.
+\newcommand{\cond}[2][]{\mathrm{cond}_{#1}(#2)}
 
 \newcommand{\entry}{$\bullet$\hspace{0.15em}}
 \newcommand{\subentry}{$\circledcirc$\hspace{0.15em}}
