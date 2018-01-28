@@ -116,4 +116,23 @@ $\min_{\lambda \in \sigma(A)} \shortabs{\lambda - \tilde{\lambda}} \leq
 $A$ symetryczna:
 $\min_i\shortabs{\lambda_i - \tilde{\lambda}_i} \leq \norm{\Delta}_2$;
 
-% TODO: Metoda QR wyznaczania wszystkich wartości własnych macierzy (wraz z ulepszeniem i wariantem praktycznym).
+% Metoda QR wyznaczania wszystkich wartości własnych macierzy (wraz z ulepszeniem i wariantem praktycznym).
+\entry
+M. QR na $\sigma(A)$:
+$ A_1 \coloneqq A;
+\fromloop[1]{k}\{
+Q_k R_k \coloneqq A_k;
+A_{k+1} \coloneqq R_k Q_k
+\} $;
+% Metoda QR z przesunięciem.
+\entry
+Lepiej:
+$ A_1 \coloneqq A;
+\fromloop[1]{k}\{
+\text{wybierz przesunięcie } \sigma_k;
+Q_k R_k \coloneqq A_k - \sigma_kI;
+A_{k+1} \coloneqq R_k Q_k + \sigma_kI
+\} $;
+% Praktyczne QR.
+\entry
+Przed iteracją sprowadź $A$ do postaci Hassenberga lub trójdiagonalnej, gdy $A=A^T$;
