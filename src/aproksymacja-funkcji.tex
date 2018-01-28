@@ -11,7 +11,7 @@ $\forallin{v}{V} \norm{f - \ena{v}} \leq \norm{f-v}$;
 
 % Fakt o istnieniu ENA.
 \entry
-$F$ przestrzenią liniową, 
+$F$ przestrzenią liniową,
 $V \subset F$ podprzestrzenią liniową skończonego wymiaru, to
 $\forall{f \in F} \ \exists{\enain{v}{V}}$;
 
@@ -19,16 +19,16 @@ $\forall{f \in F} \ \exists{\enain{v}{V}}$;
 \entry
 Normy:
 \subentry
-$L^1(a,b)$: 
+$L^1(a,b)$:
 $\norm{f}_1 \coloneqq \int^b_a\abs{f(t)} dt$;
 \subentry
-$L^2(a,b)$: 
+$L^2(a,b)$:
 $\norm{f}_2 \coloneqq (\int^b_a\abs{f(t)}^2 dt)^{1/2}$;
 \subentry
-$C^0(a,b)$: 
+$C^0(a,b)$:
 $\norm{f}_\infty \coloneqq \maxin{t}{[a,b]} \abs{f(t)}$;
 \subentry
-$L^2_\rho(a,b)$: 
+$L^2_\rho(a,b)$:
 $\norm{f}_{2, \rho} \coloneqq (\int^b_a\abs{f(t)}^2 \rho(t) \ dt)^{1/2}$,
 gdzie
 $\rho(t) > 0$ na $[a,b]$
@@ -53,7 +53,7 @@ $(\sum^n_{i=0} \rho_i\abs{f(t_i)}^2)^{1/2}, \rho_i>0$;
 
 % Aproksymacja w przestrzeni unitarnej.
 \entry
-Niech $H$ to przestrzeń liniowa z iloczynem skalarnym 
+Niech $H$ to przestrzeń liniowa z iloczynem skalarnym
 $(x,y)$ dla $x, y \in H$
 \subentry
 $H \coloneqq \mathbb{R}^n$:
@@ -85,7 +85,7 @@ $\sum \ena{\alpha}_i (v_i, v_j) = (f, v_j)$;
 
 \entry
 $[(v_i, v_j)]^n_{i,j=1}$
-jest symetryczna i dodatnio określona (macierz Grama), 
+jest symetryczna i dodatnio określona (macierz Grama),
 więc ma dokładnie 1 rozwiązanie;
 
 % Macierz Grama.
@@ -96,7 +96,7 @@ Macierz Grama: zazwyczaj gęsta i źle uwarunkowana, SPD (więc alg. Choleskiego
 \entry
 Wybierając bazę ortogonalną w $V = \text{span}\set{p_i}^n_{i=1}$,
 gdzie $(p_i, p_j) = 0, i \neq j$, dostajemy macierz Grama
-$[(p_i, p_i)]$, 
+$[(p_i, p_i)]$,
 $\ena{v} = \sum((f,p_i)\cdot p_i)/(p_i, p_i)$,
 a gdy $\set{p_i}^n_{i=1}$ unormowane:
 $\ena{v} = \sum(f,p_i)\cdot p_i$;
@@ -105,16 +105,16 @@ $\ena{v} = \sum(f,p_i)\cdot p_i$;
 \entry
 $L^2_\rho(a;b)$:
 $(f,g) \coloneqq \int^b_a f(x)g(x)\rho(x) \ dx$,
-$\rho$ to funkcja wagowa $\rho > 0$ na $[a;b]$ 
+$\rho$ to funkcja wagowa $\rho > 0$ na $[a;b]$
 (w skończonej liczbie punktów może się zerować);
 $\norm{f}^2_\rho \coloneqq (f,f)^{1/2}$;
 
 % Formuła trójczłonowa.
 \entry
-Wielomiany $\mathbb{P}_k, k=0,\ldots$ postaci 
+Wielomiany $\mathbb{P}_k, k=0,\ldots$ postaci
 $P_k = x^k + o(x^k)$ wyrażają się wzorem:
 $P_k(x) = (x + \beta_k) \cdot P_{k-1}(x) + \gamma_k P_{k-2}(x), k=1,\ldots$,
-$P_{-1}(x)=0$, 
+$P_{-1}(x)=0$,
 $P_{0}(x)=1$,
 $\beta_k= \frac{(x P_{k-1}, P_k)}{\norm{P_{k-1}}^2}$,
 $\gamma_k = \frac{(x P_{k-1}, P_{k-2})}{\norm{P_{k-2}}^2}$,
