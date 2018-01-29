@@ -2,7 +2,7 @@
 
 \entry
 Wskaźnik u. $P$ w punkcie $x$:
-$\mathrm{cond}_{\mathrm{abs}}(P,x) \coloneqq \sup\limits_{\text{małe }\delta} \frac{\norm{P(x+\delta) - P(x)}}{\norm{\delta}}$;
+$\mathrm{cond}_{\mathrm{abs}}(P,x) \coloneqq \sup_{\text{małe }\delta} \frac{\norm{P(x+\delta) - P(x)}}{\norm{\delta}}$;
 
 \entry
 $\norm{P(x+\delta)} \leq \mathrm{cond}_{\mathrm{abs}}(P,x)\norm{\delta}$;
@@ -13,10 +13,11 @@ $\frac{\norm{P(x+\delta) - P(x)}}{\norm{P(x)}} \leq \mathrm{cond}_{\mathrm{rel}}
 % Idealizacja.
 
 \entry
-$\mathrm{cond}_{\mathrm{abs}}(P,x) \coloneqq \lim\limits_{\norm{\delta \to 0}} \frac{\norm{P(x+\delta) - P(x)}}{\norm{\delta}}$;
-
-\entry
-$\mathrm{cond}_{\mathrm{rel}}(P,x) \coloneqq \mathrm{cond}_{\mathrm{abs}}(P,x)\frac{\norm{x}}{\norm{P(x)}} $;
+$
+\mathrm{cond}_{\mathrm{rel}}(P,x) \coloneqq
+\mathrm{cond}_{\mathrm{abs}}(P,x) \frac{\norm{x}}{\norm{P(x)}}  \coloneqq
+\lim\limits_{\norm{\delta \to 0}} \frac{\norm{P(x+\delta) - P(x)}}{\norm{\delta}} \cdot \frac{\norm{x}}{\norm{P(x)}}
+$;
 
 \entry
 Zadanie $P$ jest źle uwarunkowane w punkcie $x$,
