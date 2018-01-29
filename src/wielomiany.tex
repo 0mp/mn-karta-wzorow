@@ -66,3 +66,14 @@ l_i(x) = \frac{(x-x_0)\cdots(x-x_n)}{(x_i - x_0)\cdots(x_i - x_{i-1})(x_i - x_{i
 l_i(x_j) = [i=j],
 w(x_j)=f(x_j)\cdot 1
 $;
+
+% Algorytm barycentryczny dla wyznaczania wartości wielomianu interpolacyjnego Lagrange'a w bazie Lagrange'a.
+\entry
+A. barycentryczny dla w. i. L. w b. L.:
+$\frac{w_i}{x - x_i}\varphi_{n+1}(x) \coloneqq l_i(x)$:
+\textsubentry{1}
+Wyznacz
+$\{w_i\}$;
+\textsubentry{2}
+$w(x) = (\sum f(x_i)\frac{w_i}{x - x_i})\varphi_{n+1}(x)$;
+$\mathcal{O}(n)$;
