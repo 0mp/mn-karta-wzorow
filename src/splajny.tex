@@ -47,3 +47,35 @@ $\deriv{s}{k}(a)=\deriv{s}{k}(b)=0, \ipoints[k=m][2m-2]{k}$;
 \entry
 Periodyczne:
 $\deriv{s}{k}(a)=\deriv{s}{k}(b), \ipoints[k=1][2m-2]{k}$;
+
+% Warunki narzucone na splajn.
+% (MP: 7 XII/2.5/2451)
+\entry
+War. narzucone na s.:
+\textsubentry{1}
+Interpolacja:
+$s_i(x_i)=f(x_i)=a_i$;
+\textsubentry{2}
+Ciągłość II pochodnej:
+$s_i''(x) = 2c_i+bd_i(x-x_i) \Rightarrow d_i=\frac{c_{i+1} - c_i}{3h}, \ipoints[0][n-2]{i}$;
+\textsubentry{3}
+Ciągłość s. w $x_{i+1}$:
+$s_i(x_{i+1}) = s_{i+1}(x_{i+1}) \Rightarrow b_i = \frac{y_{i+1} - y_i}{h} - \frac{h}{3}(c_{i+1} + 2c_i)$;
+\textsubentry{4}
+Ciągłość pochodnej w $x_{i+1}$:
+$
+s_i'(x) = b_i +2c_i(x - x_i) + 3 d_i (x - x_i)^2,
+s_i'(x_{i+1}) = s_{i+1}'(x_{x+1}),
+b_{i+1} = b_i + 2 c_i h + 3 d_i h^2
+$;
+
+% Wzór na zależność pomiędzy c_i a y_i.
+\entry
+Z warunków n. n. s.:
+$
+g_{i+1} \coloneqq
+c_i + 4c_{i+1} + c_{i+2} =
+\frac{3}{h}(\frac{y_{i+2} - y_{i+1}}{h} - \frac{y_{i+1} - y_{i}}{h}),
+i=0,\ldots, n-2,
+\mathrm{tridiag}[\prescript{4}{1}{}^{1}] \cdot [c_i]^{n-1}_{1} = [g_i]^{n-1}_{1}
+$
