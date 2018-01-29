@@ -116,3 +116,55 @@ gdzie
 $V_i^k(x) \coloneqq \frac{x-x_i}{x_{i+k} - x_i}$;
 \entry
 $\forall_i B_i^k \in \mathbb{P}_{k} \text{ na } [x_i; x_{i+1}]$;
+
+% Własności B-splajnów.
+
+% Ograniczony nośnik
+\entry
+Ograniczony nośnik:
+$x \notin (x_i; x_{i+k+1}) \Rightarrow B^k_i(x)=0$;
+
+% Algorytm de Boor'a.
+% (MP: 14 XII/4/22423)
+% TODO: Ulepszyć zapis, dodać graficzną intuicję dla obliczania c_m^0.
+\entry
+A. de Boor'a:
+$
+s(x) =
+\sum_{i=-\infty}^{\infty} c_i^k B^k_i (x) =
+\sum_{i=-\infty}^{\infty} c_i^{k-1} B^{k-1}_i (x) =
+\ldots =
+\sum_{i=-\infty}^{\infty} c_i^{0} B^{0}_i (x)
+$,
+więc
+$x\in [x_m; x_{m+1}) \Rightarrow \sum c^0_i B^0_i(x) = c_m^0$;
+
+% Unormowanie B-splajnów.
+\entry
+Unormowanie B-splajnów:
+$\sum_{i = -\infty}^\infty B_i^k(x) = 1$;
+
+% Fakt o pochodnych B-splajnów.
+% (MP: 14 XII/5/2244)
+\entry
+Pochodne B-s.:
+$\frac{1}{dx}B_i^k(x) = k (\alpha^k_i B_i^{k-1}(x) - \alpha^k_{i+1} B^{k-1}_{i+1}(x))$,
+gdzie
+$\alpha_i^k \coloneqq \frac{1}{dx}V_i^k(x) - \frac{1}{x_{i+k} - x_i}$;
+% Wniosek I.
+\entry
+$
+\frac{d}{dx}(\sum_{i = -\infty}^\infty c_i B_i^k(x) ) =
+k \sum_{i = -\infty}^\infty \frac{ c_i - c_{i-1} }{ x_{i+1} - x_i } B^{k-1}_i(x)
+$;
+% Wniosek II.
+\entry
+$k \geq 1 \Rightarrow B_i^k \in C^{k-1}(\mathbb{R})$;
+
+% Twierdzenie o bazie B-splajnowej.
+\entry
+Tw.:
+$\ipoints[i=k][n-1]{B_i^k}$
+tworzą bazę $S_k$ na $[x_0; x_n]$,
+więc
+$s \in S_k \Rightarrow \exists_{\{c_i\}} s(x) \equiv \sum_{i=-k}^{n-1} c_i B_i^k(x)$;
