@@ -20,7 +20,7 @@ i $\varepsilon\coloneqq \max\set{ \frac{\norm{A - \tilde{A}}_2}{\norm{A}_2}, \fr
 tak małe, że $\mathrm{cond}_2(A)\cdot \varepsilon < 1$,
 gdzie $\mathrm{cond}_2(A) = \frac{\sigma_{\max(A)}}{\min(A)}$.
 Wtedy zadanie ma 1 rozwiązanie i
-$\frac{\norm{x-\tilde{x}}_2}{\norm{x}_2} \leq  \varepsilon \cdot \mathrm{cond}_{\mathrm{LZNK}}(A,b)+ O(\varepsilon^2)$,
+$\frac{\norm{x-\tilde{x}}_2}{\norm{x}_2} \leq  \varepsilon \cdot \mathrm{cond}_{\mathrm{LZNK}}(A,b)+ \bigoh{\varepsilon^2}$,
 gdzie $\mathrm{cond}_{\mathrm{LZNK}}(A,b) = \frac{2\mathrm{cond}_2(A)}{\cos\theta} + \tan\theta(\mathrm{cond}_2(A))^2$,
 gdzie $\sin\theta=\frac{\norm{b-Ax}_2}{\norm{b}_2}$;
 
@@ -42,8 +42,8 @@ $A=QR$;
 $\norm{b-Ax}^2_2 = \norm{Q^T_1b-R_1x}^2_2 + \norm{\tilde{Q}^Tb}^2_2 \to \min !$;
 \textsubentry{3}
 Rozwiązaniem jest $x\in \mathbb{R}^m$ spełniający ukł. r-ń z macierzą trójkątną $R_1x=Q_1^Tb$.
-Koszt: $O(m^2)$.
-Koszt $Q_1^Tb$: $O(nm)$;
+Koszt: $\bigoh{m^2}$.
+Koszt $Q_1^Tb$: $\bigoh{nm}$;
 
 % TODO: Wyznaczanie rozkładu QR metodą Householdera.
 % TODO: Definicja przekształcenia Householdera.

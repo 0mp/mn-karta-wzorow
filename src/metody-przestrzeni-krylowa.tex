@@ -23,7 +23,7 @@ Metoda gradientów sprzężonych (CG):
 $A=A^T>0$, $x_k\in x_0 + K_k$ t.,
 że $\norm{x_k+x^*}_A\leq \norm{x-x^*}_A \forall x\in x_0 + K_k$,
 gdzie $\norm{y}^2_A \coloneqq y^TAy$.
-Koszt iteracji, to mnożenie wektora przez $A$, czyli $O(N)$.
+Koszt iteracji, to mnożenie wektora przez $A$, czyli $\bigoh{N}$.
 W idealnej arytmetyce zbieżne do $x^*$ w $\leq N$ iteracjach.
 Po $k$ iteracjach:
 $\norm{x_k - x^*}_A\leq 2(\frac{\sqrt{H} - 1}{\sqrt{H} + 1})^k\norm{x_0-x^*}_A$,
