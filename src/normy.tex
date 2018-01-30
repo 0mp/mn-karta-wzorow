@@ -6,42 +6,39 @@
 $\norm{x}_1 \coloneqq \sum^n_{i=1}\abs{x_i}$;
 \entry
 $\norm{x}_2 \coloneqq \sqrt{x_1^2+\ldots + x_n^2}$;
-
 \entry
 $\norm{x}_\infty \coloneqq \max_{i}\abs{x_i}$;
+
 \entry
 $\norm{x}_p \coloneqq (\sum_i\abs{x_i}^p)^{1/p}$;
-
 % Nierówność Cauchy’ego-Schwarza.
 \entry
 $\abs{x^Ty}_2 \leq \norm{x}_2\cdot\norm{y}_2$, dla $x,y\in\mathbb{R^N}$;
 
 \entry
-$Q^TQ=I$, to $\norm{Qx}^2_2=\norm{x}^2_2$;
+$A^TA=I$, to $\norm{Ax}^2_2=\norm{x}^2_2$;
+\entry
+$\norm{\mathrm{diag}} = \max_i d_i$;
+%\entry
+%$\norm{I} = 1$;
 
 % Normy macierzowe indukowane przez normy wektorowe.
 
-\entry
-$\norm{A}_p \coloneqq \max\limits_{x\neq 0} \frac{\norm{A_x}_p}{\norm{x}_p} = \max\limits_{\norm{x}_p = 1} \norm{A_x}_p$;
-
 % Fakty.
-\entry
-$\norm{I} = 1$;
-\entry
-$\norm{Ax} \leq \norm{A} \cdot \abs{x}$;
-\entry
-$\norm{AB} \leq \norm{A} \cdot \norm{B}$;
+%\entry
+%$\norm{Ax} \leq \norm{A} \cdot \abs{x}$;
+%\entry
+%$\norm{AB} \leq \norm{A} \cdot \norm{B}$;
 
 \entry
 $\norm{A}_1 \coloneqq \max_j\sum_i\abs{a_{ij}}$;
 \entry
+$\norm{A}_2 \coloneqq \max\set{\sqrt{\lambda} : \lambda \in \sigma{A^TA}}$;
+
+\entry
 $\norm{A}_\infty \coloneqq \max_i\sum_j\abs{a_{ij}}$;
-
 \entry
-$\norm{A}_2 \coloneqq \max\set{\sqrt{\lambda} : \lambda\text{ --- wartość własna } A^TA}$;
-
-\entry
-$\norm{D} = \max_i d_i$;
+$\norm{A}_p \coloneqq \max\limits_{x\neq 0} \frac{\norm{A_x}_p}{\norm{x}_p} = \max\limits_{\norm{x}_p = 1} \norm{A_x}_p$;
 
 \entry
 Jeśli $\forall_{x} \norm{Ax}\leq c\norm{x}$, że $\exists_y \norm{Ay} = c\norm{y}$, to $c=\norm{A}$;
@@ -49,7 +46,6 @@ Jeśli $\forall_{x} \norm{Ax}\leq c\norm{x}$, że $\exists_y \norm{Ay} = c\norm{
 % Fakt z zadania 2.4. z części 2 ćwiczeń Konrada Sakowskiego.
 \entry
 $\norm{A}_2 = \sup_{\norm{x}_2=1, \norm{y}_2=1}\abs{y^TAx}$;
-
 % Fakt z zadania 2.5. z części 2 ćwiczeń Konrada Sakowskiego.
 \entry
 $A\in\mathbb{R}^{N\times N} \Rightarrow \norm{A}^2_2=\norm{A^TA}_2$;
@@ -58,5 +54,3 @@ $A\in\mathbb{R}^{N\times N} \Rightarrow \norm{A}^2_2=\norm{A^TA}_2$;
 
 %\entry
 %Norma Frobeniusa: $\norm{A}_F \coloneqq \sqrt{\sum_i\sum_j\abs{a_{ij}}^2}$; $\norm{I}_F=\sqrt{N}$;
-
-
