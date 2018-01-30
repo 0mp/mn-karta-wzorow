@@ -2,7 +2,7 @@
 
 % Aproksymacja jednostajna, norma supremum.
 \entry
-$\norm{g}_\infty \coloneqq \max_{x \in [a;b]} \abs{g(x)}$;
+$\norm{g}_\infty \coloneqq \max_{x \in [a;b]} \shortabs{g(x)}$;
 % Twierdzenie o jednoznaczności optymalnego wielomianowej aproksymacji jednostajnej.
 \entry
 $\exists !$
@@ -15,15 +15,15 @@ $\norm{\cdot}_\infty$;
 % Formuła trójczłonowa na wielomiany Czebyszewa.
 % XXX: Czy jest poprawna?
 \entry
-\textbf{Czebyszew (f. trójczłonowa)}:
+\textbf{F. trójczłonowa (Czebyszew)}:
 $T_{k + 1} = 2T_1(x)T_k(x) - T_{k-1}(x)$,
 $T_1(x) = \cos(1 \cdot \theta)=x$,
 $T_0(x) = 1$;
 % Wniosek z formuły trójczłonowej.
 \entry
-$\abs{T_k(x)} \leq 1$
+$\shortabs{T_k(x)} \leq 1$
 dla
-$\abs{x} \leq 1$;
+$\shortabs{x} \leq 1$;
 
 % Fakt o miejscach zerowych k-tego wielomianu Czebyszewa.
 \entry
@@ -49,7 +49,7 @@ ma najmniejszą normę maksimum na [-1;1].
 Tzn.
 $\max_{x \in [-1;1]} \abs{\frac{1}{2^{k-1}} T_k(x)} \leq
 \max_{x \in [-1;1]} \abs{w(x)}
-\forall w(x) = x^k + o(x^k)$;
+\forall_{w(x) = x^k + o(x^k)}$;
 
 % Węzły Czebyszewa w interpolacji wielomianowej Lagrange'a.
 \entry
@@ -74,14 +74,14 @@ $\norm{f - p^{*}}_\infty \leq \norm{f - p}_\infty \forall p\in \mathbb{P}_n$;
 
 % Twierdzenie Czebyszewa o alternansie
 \entry
-Tw. (\textbf{Czebyszewa o alternansie}):
+\textbf{Tw. Czebyszewa o alternansie}:
 $p^{*} \in \mathbb{P}_n$
 jest ENA dla $f$
 $\leftrightarrow$
 istnieją co najmniej $n+2$ punkty $x_i$ w $[a,b]$ (\textit{alternans}), że
 $f(x_i) - p^{*}(x_i) = \varepsilon \cdot (-1)^i \cdot \norm{f - p^{*}}_\infty$,
 $\varepsilon \in \set{-1,+1}$;
-($\abs{f(x_i) - p^{*}(x_i)} = \norm{f - p^{*}}_\infty$);
+$\shortabs{f(x_i) - p^{*}(x_i)} = \norm{f - p^{*}}_\infty$;
 
 % TODO: Wyznaczanie ENA dla wielomianowej jednostajnej nieskończonym algorytmem iteracyjnym Rameza.
 
