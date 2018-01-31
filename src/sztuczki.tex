@@ -7,3 +7,10 @@ $\det(A) = \prod \lambda_i = \sum (-1)^{i+1}$ \texttt{A(1,i)*det(A(2:n,1:i-1), A
 % Całkowanie przez części
 \entry
 $\int f(x)g'(x)dx = f(x)g(x) - \int f'(x)g(x)dx$;
+
+% Wzór Taylora z resztą Lagrange'a.
+\entry
+$
+f(x) =
+\sum_{i=0}^{m} \frac{\deriv{f}{i}(\ena{x})}{i!} + \frac{\deriv{f}{m+1}(\xi)}{(m+1)!}(x-\ena{x})^{m+1}
+$;
