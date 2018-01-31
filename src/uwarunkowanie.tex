@@ -6,7 +6,6 @@ $\mathrm{cond}_{\mathrm{abs}}(P,x) \coloneqq \sup_{\text{małe }\delta} \frac{\n
 
 \entry
 $\norm{P(x+\delta)} \leq \mathrm{cond}_{\mathrm{abs}}(P,x)\norm{\delta}$;
-
 \entry
 $\frac{\norm{P(x+\delta) - P(x)}}{\norm{P(x)}} \leq \mathrm{cond}_{\mathrm{rel}}(P,x)\frac{\norm{\delta}}{\norm{x}}$;
 
@@ -69,8 +68,8 @@ gdzie $\Delta \leq \varepsilon\norm{A}$;
 M. e. G. dla $Ax=b$ daje $\tilde{x}$ t., że
 $(A+\Delta) \tilde{x} = b$,
 gdzie $\frac{\norm{\Delta}_\infty}{\norm{A}_\infty} \leq K\cdot N^3 \cdot \rho_N \cdot \nu$,
-gdzie $\rho_N \coloneqq \frac{\max_{i,j,k}\abs{a_{i,j}^{(k)}}}{\max_{i,j} \abs{a_{i,j}}}$,
-gdzie $a^{(k)}_{i,j}$ to wyraz macierzy w $k$-tym kroku LU. W praktyce wskaźnik wzrostu $\rho_N\leq 2^{N-1}$, więc m. el. G. jest prak. NP.
+gdzie $\rho_N \coloneqq \flatfrac{\max_{i,j,k}\shortabs{a_{i,j}^{(k)}}}{\max_{i,j} \shortabs{a_{i,j}}}$,
+gdzie $a^{(k)}_{i,j} \in A$ w $k$-tym kroku LU. W praktyce wskaźnik wzrostu $\rho_N\leq 2^{N-1}$, więc m. el. G. jest prak. NP.
 
 % Numeryczne kryterium NP.
 \entry

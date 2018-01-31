@@ -9,7 +9,6 @@ $Ax = \lambda x$;
 % Fakt o wartościach własnych (1).
 \entry
 Gdy $\lambda$ dla $A$, to $(\lambda - \mu)$ dla $A-\mu I$;
-
 % Fakt o wartościach własnych (2).
 \entry
 Gdy $\lambda$ dla $A$ nieos., to $\frac{1}{\lambda}$ dla $A^{-1}$;
@@ -34,7 +33,7 @@ $(A-\mu I)^{-1}$
 to
 $\frac{1}{\lambda_i-\mu}$
 i jeśli
-$\frac{1}{\abs{\lambda_i-\mu}} > \frac{1}{\abs{\lambda_j-\mu}}, j\neq i$,
+$\frac{1}{\shortabs{\lambda_i-\mu}} > \frac{1}{\shortabs{\lambda_j-\mu}}, j\neq i$,
 to
 $\frac{1}{\lambda_i-\mu}$
 jest dominująca;
@@ -46,16 +45,16 @@ jest dominująca;
 $\text{for } k=0,\ldots$:
 $x_{k+1} = (A-\mu I)^{-1}x_k$;
 $x_{k+1} = x_{k+1} / \norm{x_{k+1}}$;
-$\mathcal{O}(n^3)$;
+$\bigoh{n^3}$;
 % Praktyczny algorytm implementujący odwrotna metodę potęgową.
 \entry
 Szybciej:
-$P(A- \mu I = LU$ (lub $A-\mu I = QR$) ($\mathcal{O}{n^3}$);
+$P(A- \mu I = LU$ (lub $A-\mu I = QR$) ($\bigoh{n^3}$);
 $\text{for } k=0,\ldots$:
 $Ly=Px_k$;
 $Ux_{k+1} = y$;
 $x_{k+1} = x_{k+1} / \norm{x_{k+1}}$;
-($\mathcal{O}(kN^2)$)
+($\bigoh{kN^2}$);
 
 % Najlepsze przybliżenie wartości własnej z użyciem ilorazu Rayleigh.
 % (MP: 16 XI/1.5/23)
